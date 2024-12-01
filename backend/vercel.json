@@ -1,34 +1,20 @@
 {
-"version": 2,
-"builds": [
-{
-"src": "server.js",
-"use": "@vercel/node",
-"config": {
-"includeFiles": [
-"dist/**"
-]
+    "version": 2,
+    "builds": [
+        {
+            "src": "server.js",
+            "use": "@vercel/node",
+            "config": {
+                "includeFiles": [
+                    "dist/**"
+                ]
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "server.js"
+        }
+    ]
 }
-}
-],
-"routes": [
-{
-"src": "/(.*)",
-"dest": "server.js"
-}
-]
-}
-```
-
-Vercel json config to support React Router in frontend
-
-```bash
-{
-"rewrites": [
-{
-"source": "/(.*)",
-"destination": "/"
-}
-]
-}
-```
