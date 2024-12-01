@@ -1,9 +1,3 @@
-
-## vercel.json
-
-Vercel json config for express backend
-
-```bash
 {
 "version": 2,
 "builds": [
